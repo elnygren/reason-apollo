@@ -62,7 +62,7 @@ external apolloClientObjectParam:
   "";
 
 module ReadQuery = (Config: ReasonApolloTypes.Config) => {
-  [@bs.module] external gql: ReasonApolloTypes.gql = "graphql-tag";
+  [@bs.module "graphql-tag"] external gql: ReasonApolloTypes.gql = "default";
   type readQueryOptions = {
     .
     "query": ReasonApolloTypes.queryString,
@@ -91,7 +91,7 @@ module ReadQuery = (Config: ReasonApolloTypes.Config) => {
 };
 
 module WriteQuery = (Config: ReasonApolloTypes.Config) => {
-  [@bs.module] external gql: ReasonApolloTypes.gql = "graphql-tag";
+  [@bs.module "graphql-tag"] external gql: ReasonApolloTypes.gql = "default";
   type writeQueryOptions = {
     .
     "query": ReasonApolloTypes.queryString,
